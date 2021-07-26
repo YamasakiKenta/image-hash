@@ -58,7 +58,6 @@ describe('ImageMagickConverter', () => {
             const converter = new ImageMagickConverter(dom.window.document);
             const hashsorce = new HashSource(new URL('http://exmaple.com/foo.png'), 2);
             const actual = await converter.convert(hashsorce);
-            return;
 
             expect(actual.src).toBe('blob:http://example.com/hoge');
             expect(dummyFetch.mock.calls[0][0]).toBe('http://exmaple.com/foo.png');
@@ -70,7 +69,7 @@ describe('ImageMagickConverter', () => {
             ]);
         });
 
-        false && it('should parse extension in dataURL.', async () => {
+        it('should parse extension in dataURL.', async () => {
             const dom = new JSDOM();
             (<any>call).mockImplementation(() => Promise.resolve({
                 exitCode: 0,
