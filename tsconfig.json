@@ -9,6 +9,7 @@
     "downlevelIteration": true,
     "types": ["jest", "node"]
   },
+  "allowJs": true,
   "include": [
     "src/**/*.ts"
   ]
