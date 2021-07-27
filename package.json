@@ -7,7 +7,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
+    "build": "webpack",
     "prepare": "npm run test && npm run build",
     "test": "jest"
   },
